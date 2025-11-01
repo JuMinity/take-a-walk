@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjjm2o53pu5um"]
+
+[ext_resource type="Texture2D" uid="uid://cdwb3xax8of18" path="res://art/owner_sample.png" id="1_5kfxt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7d7be"]
+radius = 54.0
+height = 138.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_senbl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5kfxt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Owner" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_7d7be")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_senbl")
