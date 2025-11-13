@@ -9,6 +9,8 @@ var screen_size
 var target_position = Vector2.ZERO # 목표 지점
 var move_timer = 0.0 # 새로운 목표 지점을 생성할 타이머
 var change_target_time = 2.0 # 목표 지점 변경 주기 (초)
+var last_direction = Vector2.DOWN # 마지막으로 향했던 방향 (애니메이션용)
+var is_moving = false # 현재 움직이는 중인지
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -50,9 +52,16 @@ func _process(delta):
 			direction = (direction * (1.0 - avoidance_strength) + avoidance_direction * avoidance_strength * 2.0).normalized()
 
 		position += direction * speed * delta
-	
+		last_direction = direction
+		is_moving = true
+	else:
+		is_moving = false
+
 	position = position.clamp(Vector2.ZERO, screen_size)
-	
+
+	# 애니메이션 업데이트
+	update_animation()
+
 	# 목줄 그리기
 	update_leash(owner_node)
 
@@ -67,6 +76,42 @@ func get_random_position_around_owner(owner_pos: Vector2) -> Vector2:
 	var offset = Vector2(cos(angle), sin(angle)) * distance
 
 	return owner_pos + offset
+
+# 애니메이션 업데이트
+func update_animation():
+	var animated_sprite = $AnimatedSprite2D
+
+	# 방향 결정 (4방향: up, down, left, right)
+	var anim_direction = ""
+
+	# 수평/수직 중 어느 쪽이 더 강한지 판단
+	if abs(last_direction.x) > abs(last_direction.y):
+		# 수평 방향이 더 강함
+		if last_direction.x > 0:
+			# 오른쪽: 왼쪽 애니메이션을 flip해서 사용
+			anim_direction = "left"
+			animated_sprite.flip_h = true
+		else:
+			anim_direction = "left"
+			animated_sprite.flip_h = false
+	else:
+		# 수직 방향이 더 강함
+		if last_direction.y > 0:
+			anim_direction = "down"
+		else:
+			anim_direction = "up"
+		animated_sprite.flip_h = false
+
+	# 움직임 상태에 따라 애니메이션 선택
+	var anim_name = ""
+	if is_moving:
+		anim_name = "walk_" + anim_direction
+	else:
+		anim_name = "idle_" + anim_direction
+
+	# 애니메이션 재생
+	if animated_sprite.animation != anim_name:
+		animated_sprite.play(anim_name)
 
 # 목줄 업데이트
 func update_leash(owner_node):

@@ -1,7 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6o2y5qibj0ln"]
+[gd_scene load_steps=21 format=3 uid="uid://b6o2y5qibj0ln"]
 
 [ext_resource type="Script" uid="uid://iaj6xa6lf3eo" path="res://pets/welsh_corgi.gd" id="1_0rws3"]
-[ext_resource type="Texture2D" uid="uid://2rlr0ga8h6bw" path="res://art/welsh_corgi_sample.png" id="1_8y47a"]
+[ext_resource type="Texture2D" uid="uid://nbo05wqdo54l" path="res://art/앞모습 1.png" id="2_vglk1"]
+[ext_resource type="Texture2D" uid="uid://bu5aav4rknggl" path="res://art/왼쪽.png" id="3_j1270"]
+[ext_resource type="Texture2D" uid="uid://bxpejvs7apusq" path="res://art/오른쪽.png" id="4_e0s0f"]
+[ext_resource type="Texture2D" uid="uid://0mr026hew2cv" path="res://art/뒷모습.png" id="5_ga0xa"]
+[ext_resource type="Texture2D" uid="uid://jxwntrrftrx8" path="res://art/앞모습 걷기 1.png" id="6_tv33s"]
+[ext_resource type="Texture2D" uid="uid://cjr7vmhb03lcf" path="res://art/앞모습 걷기 2.png" id="7_cr2gi"]
+[ext_resource type="Texture2D" uid="uid://bsd8vcvybgm6f" path="res://art/왼쪽 걷기 2.png" id="8_p6ewv"]
+[ext_resource type="Texture2D" uid="uid://c5khkww8ox0x7" path="res://art/왼쪽 걷기 1.png" id="9_7r31l"]
+[ext_resource type="Texture2D" uid="uid://mihp23i5fkxw" path="res://art/왼쪽 걷기 4.png" id="10_bdvah"]
+[ext_resource type="Texture2D" uid="uid://ir0wn7psv7lf" path="res://art/왼쪽 걷기 3.png" id="11_u0exj"]
+[ext_resource type="Texture2D" uid="uid://cuas7hiqn500l" path="res://art/오른쪽 걷기 1.png" id="12_ocohl"]
+[ext_resource type="Texture2D" uid="uid://8y7s8ixheoa2" path="res://art/오른쪽 걷기 4.png" id="13_1pr1v"]
+[ext_resource type="Texture2D" uid="uid://c2wqok2xom0pa" path="res://art/오른쪽 걷기 3.png" id="14_nmqgd"]
+[ext_resource type="Texture2D" uid="uid://dmxlymbmaxynk" path="res://art/오른쪽 걷기 2.png" id="15_owomh"]
+[ext_resource type="Texture2D" uid="uid://jgavgmad8r1y" path="res://art/뒷모습 걷기 1.png" id="16_ypfa7"]
+[ext_resource type="Texture2D" uid="uid://cwrcou8734708" path="res://art/뒷모습 걷기 2.png" id="17_et5hx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rws3"]
 size = Vector2(131, 98)
@@ -10,11 +25,91 @@ size = Vector2(131, 98)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_8y47a")
+"texture": ExtResource("2_vglk1")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle_down",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_j1270")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_e0s0f")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ga0xa")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_tv33s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cr2gi")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_p6ewv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7r31l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bdvah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_u0exj")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ocohl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1pr1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nmqgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_owomh")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ypfa7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_et5hx")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 8.0
 }]
 
 [sub_resource type="GDScript" id="GDScript_cj5b2"]
@@ -30,6 +125,9 @@ shape = SubResource("RectangleShape2D_0rws3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cj5b2")
+animation = &"walk_left"
+frame = 1
+frame_progress = 0.40573868
 script = SubResource("GDScript_cj5b2")
 
 [node name="Leash" type="Line2D" parent="."]
