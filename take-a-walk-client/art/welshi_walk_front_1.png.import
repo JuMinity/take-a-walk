@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bklejqmtpdflv"
-path="res://.godot/imported/앞모습 2.png-521875eea3c49d8d3c2a6bcf6a9cb059.ctex"
+uid="uid://jxwntrrftrx8"
+path="res://.godot/imported/welshi_walk_front_1.png-41c03f093d3a109545583306d23bdc51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/앞모습 2.png"
-dest_files=["res://.godot/imported/앞모습 2.png-521875eea3c49d8d3c2a6bcf6a9cb059.ctex"]
+source_file="res://art/welshi_walk_front_1.png"
+dest_files=["res://.godot/imported/welshi_walk_front_1.png-41c03f093d3a109545583306d23bdc51.ctex"]
 
 [params]
 

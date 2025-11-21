@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m4hvbscs0r72"
-path="res://.godot/imported/welshi_corgi_sample.png-36f37f7c41bf03910e195b4fd3c78ba3.ctex"
+uid="uid://cwrcou8734708"
+path="res://.godot/imported/welshi_walk_back_1.png-3ff0fc701e2a76979e567f31608b3b01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/welshi_corgi_sample.png"
-dest_files=["res://.godot/imported/welshi_corgi_sample.png-36f37f7c41bf03910e195b4fd3c78ba3.ctex"]
+source_file="res://art/welshi_walk_back_1.png"
+dest_files=["res://.godot/imported/welshi_walk_back_1.png-3ff0fc701e2a76979e567f31608b3b01.ctex"]
 
 [params]
 

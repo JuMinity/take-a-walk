@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpj8ii8knv6xb"
-path="res://.godot/imported/bichon.png-25a9f367a9b097f7b409599be9665043.ctex"
+uid="uid://bxpejvs7apusq"
+path="res://.godot/imported/welshi_right.png-aa58efb262708347b8d2aa233d35eef0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/bichon.png"
-dest_files=["res://.godot/imported/bichon.png-25a9f367a9b097f7b409599be9665043.ctex"]
+source_file="res://art/welshi_right.png"
+dest_files=["res://.godot/imported/welshi_right.png-aa58efb262708347b8d2aa233d35eef0.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxpejvs7apusq"
-path="res://.godot/imported/오른쪽.png-84d4855947223596e058dca8f30d56e0.ctex"
+uid="uid://bu5aav4rknggl"
+path="res://.godot/imported/welshi_left.png-aec0a73594c602ef48c34091d0433c75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/오른쪽.png"
-dest_files=["res://.godot/imported/오른쪽.png-84d4855947223596e058dca8f30d56e0.ctex"]
+source_file="res://art/welshi_left.png"
+dest_files=["res://.godot/imported/welshi_left.png-aec0a73594c602ef48c34091d0433c75.ctex"]
 
 [params]
 

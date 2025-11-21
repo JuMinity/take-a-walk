@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0mr026hew2cv"
-path="res://.godot/imported/뒷모습.png-a211afa5057533e2d6f68a51f79ff30f.ctex"
+path="res://.godot/imported/welshi_back.png-4dfa9065e995cc1fcc1a9aa44464e16f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/뒷모습.png"
-dest_files=["res://.godot/imported/뒷모습.png-a211afa5057533e2d6f68a51f79ff30f.ctex"]
+source_file="res://art/welshi_back.png"
+dest_files=["res://.godot/imported/welshi_back.png-4dfa9065e995cc1fcc1a9aa44464e16f.ctex"]
 
 [params]
 

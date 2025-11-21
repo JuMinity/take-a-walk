@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bycjyw3scvm7m"
-path="res://.godot/imported/ugly_bichon.png-d638cefaec30cc378fcb3bf86f84eff2.ctex"
+uid="uid://ir0wn7psv7lf"
+path="res://.godot/imported/welshi_walk_left_3.png-5992f81b8365f19a1d8951553d6f570c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/ugly_bichon.png"
-dest_files=["res://.godot/imported/ugly_bichon.png-d638cefaec30cc378fcb3bf86f84eff2.ctex"]
+source_file="res://art/welshi_walk_left_3.png"
+dest_files=["res://.godot/imported/welshi_walk_left_3.png-5992f81b8365f19a1d8951553d6f570c.ctex"]
 
 [params]
 
