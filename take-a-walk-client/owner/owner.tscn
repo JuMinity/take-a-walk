@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjjm2o53pu5um"]
 
-[ext_resource type="Texture2D" uid="uid://cdwb3xax8of18" path="res://art/owner_sample.png" id="1_5kfxt"]
+[ext_resource type="Texture2D" uid="uid://vpxxvc03w1sx" path="res://art/owner_sample.png" id="1_5kfxt"]
 [ext_resource type="Script" uid="uid://7nax5w4yk3dk" path="res://owner/owner.gd" id="1_krui2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7d7be"]

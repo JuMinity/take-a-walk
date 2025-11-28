@@ -38,19 +38,7 @@ func _process(delta):
 	# 목표 지점에 충분히 가까우면 멈춤 (떨림 방지)
 	if distance_to_target > 5.0:
 		var direction = (target_position - position).normalized()
-
-		# Owner를 피하는 로직
-		if distance_to_owner < min_distance:
-			# Owner에서 멀어지는 방향 계산
-			var avoidance_direction = (position - owner_node.position).normalized()
-
-			# Owner와의 거리에 따라 회피 강도 조절 (가까울수록 강하게)
-			var avoidance_strength = 1.0 - (distance_to_owner / min_distance)
-
-			# 목표 방향과 회피 방향을 혼합
-			# 회피 강도에 따라 가중치 조절
-			direction = (direction * (1.0 - avoidance_strength) + avoidance_direction * avoidance_strength * 2.0).normalized()
-
+		
 		position += direction * speed * delta
 		last_direction = direction
 		is_moving = true
