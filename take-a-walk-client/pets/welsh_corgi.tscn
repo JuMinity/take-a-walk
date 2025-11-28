@@ -1,6 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6o2y5qibj0ln"]
 
-[ext_resource type="Texture2D" uid="uid://2rlr0ga8h6bw" path="res://art/welsh_corgi_sample.png" id="1_8y47a"]
+[ext_resource type="Script" uid="uid://iaj6xa6lf3eo" path="res://pets/welsh_corgi.gd" id="1_0rws3"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/welsh_corgi.png" id="2_vglk1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rws3"]
 size = Vector2(131, 98)
@@ -9,14 +10,99 @@ size = Vector2(131, 98)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_8y47a")
+"texture": ExtResource("2_vglk1")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle_down",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vglk1")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 8.0
 }]
 
+[sub_resource type="GDScript" id="GDScript_cj5b2"]
+script/source = "extends AnimatedSprite2D
+"
+
 [node name="WelshCorgi" type="Area2D"]
+script = ExtResource("1_0rws3")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -24,3 +110,9 @@ shape = SubResource("RectangleShape2D_0rws3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cj5b2")
+animation = &"walk_left"
+script = SubResource("GDScript_cj5b2")
+
+[node name="Leash" type="Line2D" parent="."]
+width = 3.0
+default_color = Color(0.6, 0.4, 0.2, 1)
