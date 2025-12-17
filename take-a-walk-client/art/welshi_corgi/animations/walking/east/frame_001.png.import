@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vpxxvc03w1sx"
-path="res://.godot/imported/owner_sample.png-fc00a0a778a5c8d81a5034dde0e728d8.ctex"
+uid="uid://ccmsw0t1k4dfm"
+path="res://.godot/imported/frame_001.png-9edaa665636db2dfa7ad7f831a52c0b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/owner_sample.png"
-dest_files=["res://.godot/imported/owner_sample.png-fc00a0a778a5c8d81a5034dde0e728d8.ctex"]
+source_file="res://art/welshi_corgi/animations/walking/east/frame_001.png"
+dest_files=["res://.godot/imported/frame_001.png-9edaa665636db2dfa7ad7f831a52c0b4.ctex"]
 
 [params]
 

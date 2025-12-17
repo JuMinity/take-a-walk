@@ -1,16 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6o2y5qibj0ln"]
+[gd_scene load_steps=28 format=3 uid="uid://b6o2y5qibj0ln"]
 
 [ext_resource type="Script" uid="uid://iaj6xa6lf3eo" path="res://pets/welsh_corgi.gd" id="1_0rws3"]
-[ext_resource type="Texture2D" path="res://art/welshi_corgi/welsh_corgi.png" id="2_vglk1"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/north/frame_000.png" id="2_north_0"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/north/frame_001.png" id="2_north_1"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/north/frame_002.png" id="2_north_2"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/north/frame_003.png" id="2_north_3"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/north/frame_004.png" id="2_north_4"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/north/frame_005.png" id="2_north_5"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/south/frame_000.png" id="3_south_0"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/south/frame_001.png" id="3_south_1"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/south/frame_002.png" id="3_south_2"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/south/frame_003.png" id="3_south_3"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/south/frame_004.png" id="3_south_4"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/south/frame_005.png" id="3_south_5"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/west/frame_000.png" id="4_west_0"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/west/frame_001.png" id="4_west_1"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/west/frame_002.png" id="4_west_2"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/west/frame_003.png" id="4_west_3"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/west/frame_004.png" id="4_west_4"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/animations/walking/west/frame_005.png" id="4_west_5"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/rotations/north.png" id="5_rot_north"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/rotations/south.png" id="6_rot_south"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/rotations/west.png" id="7_rot_west"]
+[ext_resource type="Texture2D" path="res://art/welshi_corgi/rotations/east.png" id="8_rot_east"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rws3"]
-size = Vector2(131, 98)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rws3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cj5b2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("6_rot_south")
 }],
 "loop": true,
 "name": &"idle_down",
@@ -18,7 +38,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("7_rot_west")
 }],
 "loop": true,
 "name": &"idle_left",
@@ -26,7 +46,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("8_rot_east")
 }],
 "loop": true,
 "name": &"idle_right",
@@ -34,7 +54,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("5_rot_north")
 }],
 "loop": true,
 "name": &"idle_up",
@@ -42,10 +62,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("3_south_0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("3_south_1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_south_2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_south_3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_south_4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_south_5")
 }],
 "loop": true,
 "name": &"walk_down",
@@ -53,16 +85,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("4_west_0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("4_west_1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("4_west_2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("4_west_3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_west_4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_west_5")
 }],
 "loop": true,
 "name": &"walk_left",
@@ -70,16 +108,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("4_west_0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("4_west_1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("4_west_2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("4_west_3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_west_4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_west_5")
 }],
 "loop": true,
 "name": &"walk_right",
@@ -87,10 +131,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("2_north_0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_vglk1")
+"texture": ExtResource("2_north_1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_north_2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_north_3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_north_4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_north_5")
 }],
 "loop": true,
 "name": &"walk_up",
@@ -106,7 +162,8 @@ script = ExtResource("1_0rws3")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_0rws3")
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_0rws3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cj5b2")

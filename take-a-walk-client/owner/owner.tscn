@@ -1,20 +1,163 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjjm2o53pu5um"]
+[gd_scene load_steps=32 format=3 uid="uid://bjjm2o53pu5um"]
 
-[ext_resource type="Texture2D" uid="uid://vpxxvc03w1sx" path="res://art/owner_sample.png" id="1_5kfxt"]
 [ext_resource type="Script" uid="uid://7nax5w4yk3dk" path="res://owner/owner.gd" id="1_krui2"]
+[ext_resource type="Texture2D" path="res://art/owner/rotations/north.png" id="1_rot_north"]
+[ext_resource type="Texture2D" path="res://art/owner/rotations/south.png" id="1_rot_south"]
+[ext_resource type="Texture2D" path="res://art/owner/rotations/east.png" id="1_rot_east"]
+[ext_resource type="Texture2D" path="res://art/owner/rotations/west.png" id="1_rot_west"]
+[ext_resource type="Texture2D" uid="uid://dtut6jucisk5u" path="res://art/owner/animations/walking/east/frame_000.png" id="2_a4gbj"]
+[ext_resource type="Texture2D" uid="uid://bphqqvliri7ag" path="res://art/owner/animations/walking/east/frame_001.png" id="3_of0ef"]
+[ext_resource type="Texture2D" uid="uid://citvojcm1ssrq" path="res://art/owner/animations/walking/east/frame_002.png" id="4_5skqp"]
+[ext_resource type="Texture2D" uid="uid://d2aa73i4armdr" path="res://art/owner/animations/walking/east/frame_003.png" id="5_vp4j4"]
+[ext_resource type="Texture2D" uid="uid://cao5qlny4a6gj" path="res://art/owner/animations/walking/east/frame_004.png" id="6_2m4o8"]
+[ext_resource type="Texture2D" uid="uid://2fubwp1iantw" path="res://art/owner/animations/walking/east/frame_005.png" id="7_k11dl"]
+[ext_resource type="Texture2D" uid="uid://ds8wyh8bnffra" path="res://art/owner/animations/walking/north/frame_000.png" id="8_idh3i"]
+[ext_resource type="Texture2D" uid="uid://bii6seiy2wj3y" path="res://art/owner/animations/walking/north/frame_001.png" id="9_5faew"]
+[ext_resource type="Texture2D" uid="uid://dg4mxvigtrr3a" path="res://art/owner/animations/walking/north/frame_002.png" id="10_f0aof"]
+[ext_resource type="Texture2D" uid="uid://b4bjckqeeu877" path="res://art/owner/animations/walking/north/frame_003.png" id="11_lbyw7"]
+[ext_resource type="Texture2D" uid="uid://basrsd2iyl25h" path="res://art/owner/animations/walking/north/frame_004.png" id="12_tu1a3"]
+[ext_resource type="Texture2D" uid="uid://b2ugr6qf5xb3" path="res://art/owner/animations/walking/north/frame_005.png" id="13_ern5k"]
+[ext_resource type="Texture2D" uid="uid://cq4fhdf6v4kfk" path="res://art/owner/animations/walking/south/frame_000.png" id="14_077cm"]
+[ext_resource type="Texture2D" uid="uid://bqmkw1wtnnghu" path="res://art/owner/animations/walking/south/frame_001.png" id="15_knwtp"]
+[ext_resource type="Texture2D" uid="uid://c2y1gcbymj5dm" path="res://art/owner/animations/walking/south/frame_002.png" id="16_l7vvy"]
+[ext_resource type="Texture2D" uid="uid://hi615rxg3ma0" path="res://art/owner/animations/walking/south/frame_003.png" id="17_v6rlh"]
+[ext_resource type="Texture2D" uid="uid://cqefy2sysiykt" path="res://art/owner/animations/walking/south/frame_004.png" id="18_58xlo"]
+[ext_resource type="Texture2D" uid="uid://cx7h1wknghrs" path="res://art/owner/animations/walking/south/frame_005.png" id="19_3fcl1"]
+[ext_resource type="Texture2D" uid="uid://diauhmq3ghw1n" path="res://art/owner/animations/walking/west/frame_000.png" id="20_6drla"]
+[ext_resource type="Texture2D" uid="uid://bsse487joshhv" path="res://art/owner/animations/walking/west/frame_001.png" id="21_qfn46"]
+[ext_resource type="Texture2D" uid="uid://bdq6ru0at22a1" path="res://art/owner/animations/walking/west/frame_002.png" id="22_1o7pm"]
+[ext_resource type="Texture2D" uid="uid://cbxe78d8886ni" path="res://art/owner/animations/walking/west/frame_003.png" id="23_2lqxb"]
+[ext_resource type="Texture2D" uid="uid://d3gsgdg0tclnt" path="res://art/owner/animations/walking/west/frame_004.png" id="24_l284i"]
+[ext_resource type="Texture2D" uid="uid://bkxxq0mwmusl4" path="res://art/owner/animations/walking/west/frame_005.png" id="25_283mr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7d7be"]
-radius = 54.0
-height = 138.0
+radius = 7.0
+height = 52.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_senbl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_5kfxt")
+"texture": ExtResource("1_rot_east")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle_east",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rot_north")
+}],
+"loop": true,
+"name": &"idle_north",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rot_south")
+}],
+"loop": true,
+"name": &"idle_south",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rot_west")
+}],
+"loop": true,
+"name": &"idle_west",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_a4gbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_of0ef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5skqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vp4j4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2m4o8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k11dl")
+}],
+"loop": true,
+"name": &"walking_east",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_idh3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5faew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f0aof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lbyw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tu1a3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ern5k")
+}],
+"loop": true,
+"name": &"walking_north",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_077cm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_knwtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_l7vvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_v6rlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_58xlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3fcl1")
+}],
+"loop": true,
+"name": &"walking_south",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_6drla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qfn46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1o7pm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_2lqxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_l284i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_283mr")
+}],
+"loop": true,
+"name": &"walking_west",
 "speed": 5.0
 }]
 
@@ -27,3 +170,4 @@ shape = SubResource("CapsuleShape2D_7d7be")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_senbl")
+animation = &"walking_east"
