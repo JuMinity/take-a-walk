@@ -4,6 +4,7 @@ extends Area2D
 var screen_size # Size of the game window.
 var target_position = Vector2.ZERO # 목표 지점 (마우스/터치 클릭 시)
 var is_auto_moving = false # 자동 이동 중인지 여부
+var last_direction = "south" # 마지막 방향 (idle 애니메이션용)
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -52,21 +53,25 @@ func _process(delta):
 
 	if velocity.length() > 0:
 		# 이동 방향에 따라 애니메이션 선택
-		var animation_name = "walking_south"  # 기본값
+		var direction = "south"  # 기본값
 
 		# 수평/수직 방향 중 더 큰 쪽으로 애니메이션 결정
 		if abs(velocity.x) > abs(velocity.y):
 			# 좌우 방향이 더 큼
 			if velocity.x > 0:
-				animation_name = "walking_east"
+				direction = "east"
 			else:
-				animation_name = "walking_west"
+				direction = "west"
 		else:
 			# 상하 방향이 더 큼
 			if velocity.y > 0:
-				animation_name = "walking_south"
+				direction = "south"
 			else:
-				animation_name = "walking_north"
+				direction = "north"
+
+		# 마지막 방향 저장
+		last_direction = direction
+		var animation_name = "walking_" + direction
 
 		# 현재 재생 중인 애니메이션과 다르면 변경
 		if $AnimatedSprite2D.animation != animation_name:
@@ -74,7 +79,11 @@ func _process(delta):
 
 		$AnimatedSprite2D.play()
 	else:
-		$AnimatedSprite2D.stop()
+		# 멈춰있을 때 idle 애니메이션 재생
+		var idle_animation = "idle_" + last_direction
+		if $AnimatedSprite2D.animation != idle_animation:
+			$AnimatedSprite2D.animation = idle_animation
+			$AnimatedSprite2D.play()
 
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
