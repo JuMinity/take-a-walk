@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed = 400 # How fast the player will move (pixels/sec).
+@export var speed = 100 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 var target_position = Vector2.ZERO # 목표 지점 (마우스/터치 클릭 시)
 var is_auto_moving = false # 자동 이동 중인지 여부
@@ -51,6 +51,27 @@ func _process(delta):
 			is_auto_moving = false
 
 	if velocity.length() > 0:
+		# 이동 방향에 따라 애니메이션 선택
+		var animation_name = "walking_south"  # 기본값
+
+		# 수평/수직 방향 중 더 큰 쪽으로 애니메이션 결정
+		if abs(velocity.x) > abs(velocity.y):
+			# 좌우 방향이 더 큼
+			if velocity.x > 0:
+				animation_name = "walking_east"
+			else:
+				animation_name = "walking_west"
+		else:
+			# 상하 방향이 더 큼
+			if velocity.y > 0:
+				animation_name = "walking_south"
+			else:
+				animation_name = "walking_north"
+
+		# 현재 재생 중인 애니메이션과 다르면 변경
+		if $AnimatedSprite2D.animation != animation_name:
+			$AnimatedSprite2D.animation = animation_name
+
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()

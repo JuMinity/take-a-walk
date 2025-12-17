@@ -1,10 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6o2y5qibj0ln"]
+[gd_scene load_steps=6 format=3 uid="uid://b6o2y5qibj0ln"]
 
 [ext_resource type="Script" uid="uid://iaj6xa6lf3eo" path="res://pets/welsh_corgi.gd" id="1_0rws3"]
-[ext_resource type="Texture2D" path="res://art/welshi_corgi/welsh_corgi.png" id="2_vglk1"]
+[ext_resource type="Texture2D" uid="uid://b18uip1prv1pd" path="res://art/welshi_corgi/welsh_corgi.png" id="2_vglk1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rws3"]
-size = Vector2(131, 98)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rws3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cj5b2"]
 animations = [{
@@ -106,7 +105,8 @@ script = ExtResource("1_0rws3")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_0rws3")
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_0rws3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cj5b2")

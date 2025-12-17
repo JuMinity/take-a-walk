@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed = 300 # 강아지 이동 속도
+@export var speed = 100 # 강아지 이동 속도
 @export var follow_radius = 300 # 주인으로부터 떨어질 수 있는 최대 거리
 @export var wander_range = 300 # 배회할 범위 (follow_radius보다 작아야 함)
 @export var min_distance = 80 # 주인과의 최소 거리 (겹침 방지)
