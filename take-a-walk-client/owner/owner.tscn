@@ -1,5 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bjjm2o53pu5um"]
 
+[ext_resource type="Texture2D" uid="uid://vpxxvc03w1sx" path="res://art/owner_sample.png" id="1_5kfxt"]
 [ext_resource type="Script" uid="uid://7nax5w4yk3dk" path="res://owner/owner.gd" id="1_krui2"]
 [ext_resource type="Texture2D" uid="uid://d84qw2pbdkb7" path="res://art/owner_character_full/animations/breathing-idle/east/frame_000.png" id="2_gvkox"]
 [ext_resource type="Texture2D" uid="uid://dqcqjgbbx8k4e" path="res://art/owner_character_full/animations/breathing-idle/east/frame_001.png" id="3_gsg8f"]

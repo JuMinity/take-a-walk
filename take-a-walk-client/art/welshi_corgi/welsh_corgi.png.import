@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjr7vmhb03lcf"
-path="res://.godot/imported/앞모습 걷기 2.png-38dcb25cda4fbfecc67ddc752cf4f2e8.ctex"
+uid="uid://b18uip1prv1pd"
+path="res://.godot/imported/welsh_corgi.png-0704afad0fd219a6f59a9468f333d2f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/앞모습 걷기 2.png"
-dest_files=["res://.godot/imported/앞모습 걷기 2.png-38dcb25cda4fbfecc67ddc752cf4f2e8.ctex"]
+source_file="res://art/welshi_corgi/welsh_corgi.png"
+dest_files=["res://.godot/imported/welsh_corgi.png-0704afad0fd219a6f59a9468f333d2f4.ctex"]
 
 [params]
 
