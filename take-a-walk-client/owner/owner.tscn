@@ -1,10 +1,11 @@
 [gd_scene load_steps=32 format=3 uid="uid://bjjm2o53pu5um"]
 
 [ext_resource type="Script" uid="uid://7nax5w4yk3dk" path="res://owner/owner.gd" id="1_krui2"]
-[ext_resource type="Texture2D" path="res://art/owner/rotations/north.png" id="1_rot_north"]
-[ext_resource type="Texture2D" path="res://art/owner/rotations/south.png" id="1_rot_south"]
-[ext_resource type="Texture2D" path="res://art/owner/rotations/east.png" id="1_rot_east"]
-[ext_resource type="Texture2D" path="res://art/owner/rotations/west.png" id="1_rot_west"]
+[ext_resource type="Script" path="res://owner/camera_setup.gd" id="1_camera_setup"]
+[ext_resource type="Texture2D" uid="uid://b13nbh2vk46h5" path="res://art/owner/rotations/east.png" id="1_rot_east"]
+[ext_resource type="Texture2D" uid="uid://ccusosboqva00" path="res://art/owner/rotations/north.png" id="1_rot_north"]
+[ext_resource type="Texture2D" uid="uid://chexe3dnlvar" path="res://art/owner/rotations/south.png" id="1_rot_south"]
+[ext_resource type="Texture2D" uid="uid://cv5gxg50g67yy" path="res://art/owner/rotations/west.png" id="1_rot_west"]
 [ext_resource type="Texture2D" uid="uid://dtut6jucisk5u" path="res://art/owner/animations/walking/east/frame_000.png" id="2_a4gbj"]
 [ext_resource type="Texture2D" uid="uid://bphqqvliri7ag" path="res://art/owner/animations/walking/east/frame_001.png" id="3_of0ef"]
 [ext_resource type="Texture2D" uid="uid://citvojcm1ssrq" path="res://art/owner/animations/walking/east/frame_002.png" id="4_5skqp"]
@@ -171,3 +172,7 @@ shape = SubResource("CapsuleShape2D_7d7be")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_senbl")
 animation = &"walking_east"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("1_camera_setup")
+enabled = true

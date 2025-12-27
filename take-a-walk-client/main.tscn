@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxgns8mec77x1"]
 
-[ext_resource type="Script" uid="uid://bnu447go66xkk" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://q0mqxh7w1h1d" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cafyqvvcx5w7a" path="res://maps/park.tscn" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bjjm2o53pu5um" path="res://owner/owner.tscn" id="3_7mycd"]
 [ext_resource type="PackedScene" uid="uid://b6o2y5qibj0ln" path="res://pets/welsh_corgi.tscn" id="4_272bh"]

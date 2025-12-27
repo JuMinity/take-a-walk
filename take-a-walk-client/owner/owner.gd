@@ -1,21 +1,22 @@
 extends Area2D
 
 @export var speed = 100 # How fast the player will move (pixels/sec).
-var screen_size # Size of the game window.
 var target_position = Vector2.ZERO # 목표 지점 (마우스/터치 클릭 시)
 var is_auto_moving = false # 자동 이동 중인지 여부
 var last_direction = "south" # 마지막 방향 (idle 애니메이션용)
 
 func _ready():
-	screen_size = get_viewport_rect().size
+	pass
 
 func _input(event):
 	# 마우스 클릭 또는 터치 이벤트 처리
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		target_position = event.position
+		# 화면 좌표를 월드 좌표로 변환
+		target_position = get_global_mouse_position()
 		is_auto_moving = true
 	elif event is InputEventScreenTouch and event.pressed:
-		target_position = event.position
+		# 터치 위치를 월드 좌표로 변환
+		target_position = get_viewport().get_canvas_transform().affine_inverse() * event.position
 		is_auto_moving = true
 
 func _process(delta):
@@ -86,4 +87,4 @@ func _process(delta):
 			$AnimatedSprite2D.play()
 
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
+	position = position.clamp(Vector2.ZERO, GameConfig.MAP_SIZE)

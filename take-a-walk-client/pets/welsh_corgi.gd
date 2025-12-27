@@ -5,7 +5,6 @@ extends Area2D
 @export var wander_range = 300 # 배회할 범위 (follow_radius보다 작아야 함)
 @export var min_distance = 80 # 주인과의 최소 거리 (겹침 방지)
 
-var screen_size
 var target_position = Vector2.ZERO # 목표 지점
 var move_timer = 0.0 # 새로운 목표 지점을 생성할 타이머
 var change_target_time = 2.0 # 목표 지점 변경 주기 (초)
@@ -13,7 +12,6 @@ var last_direction = Vector2.DOWN # 마지막으로 향했던 방향 (애니메�
 var is_moving = false # 현재 움직이는 중인지
 
 func _ready():
-	screen_size = get_viewport_rect().size
 	# 초기 목표 위치 설정
 	target_position = position
 
@@ -45,7 +43,7 @@ func _process(delta):
 	else:
 		is_moving = false
 
-	position = position.clamp(Vector2.ZERO, screen_size)
+	position = position.clamp(Vector2.ZERO, GameConfig.MAP_SIZE)
 
 	# 애니메이션 업데이트
 	update_animation()
