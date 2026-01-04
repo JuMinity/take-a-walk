@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnyri8j5bk86c"
-path="res://.godot/imported/grass_with_dirt.png-5e9b3d10e3e7be53695b43fa67cad3b9.ctex"
+uid="uid://cbg7q1h5jnulu"
+path="res://.godot/imported/frame_004.png-cc51742023b42944315b318e6cde9fc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/maps/park/tilesets/grass_with_dirt.png"
-dest_files=["res://.godot/imported/grass_with_dirt.png-5e9b3d10e3e7be53695b43fa67cad3b9.ctex"]
+source_file="res://art/welshi_corgi/animations/walk-6-frames/north/frame_004.png"
+dest_files=["res://.godot/imported/frame_004.png-cc51742023b42944315b318e6cde9fc1.ctex"]
 
 [params]
 
