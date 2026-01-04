@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs5jc3knb8bmp"
-path="res://.godot/imported/east.png-8e98689b23e88e458463ba37208d4fea.ctex"
+uid="uid://dbbopkrjk6f5y"
+path="res://.godot/imported/frame_005.png-a1b780e617e6af9ac95c538e25b4ad8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/owner/rotations/east.png"
-dest_files=["res://.godot/imported/east.png-8e98689b23e88e458463ba37208d4fea.ctex"]
+source_file="res://art/owner/animations/walking-6-frames/west/frame_005.png"
+dest_files=["res://.godot/imported/frame_005.png-a1b780e617e6af9ac95c538e25b4ad8e.ctex"]
 
 [params]
 

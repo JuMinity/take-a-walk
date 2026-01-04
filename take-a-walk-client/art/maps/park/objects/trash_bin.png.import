@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs5jc3knb8bmp"
-path="res://.godot/imported/east.png-8e98689b23e88e458463ba37208d4fea.ctex"
+uid="uid://cj7xkxmr4x7r"
+path="res://.godot/imported/trash_bin.png-207152857a9dffd30473ef9abb93f3b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/owner/rotations/east.png"
-dest_files=["res://.godot/imported/east.png-8e98689b23e88e458463ba37208d4fea.ctex"]
+source_file="res://art/maps/park/objects/trash_bin.png"
+dest_files=["res://.godot/imported/trash_bin.png-207152857a9dffd30473ef9abb93f3b7.ctex"]
 
 [params]
 

@@ -9,9 +9,10 @@
 script = ExtResource("1_1bvp3")
 
 [node name="Park" parent="." instance=ExtResource("2_lquwl")]
+position = Vector2(-24, 0)
 
 [node name="Owner" parent="." instance=ExtResource("3_7mycd")]
-position = Vector2(148, 109)
+position = Vector2(150, 109)
 
 [node name="WelshCorgi" parent="." instance=ExtResource("4_272bh")]
 position = Vector2(256, 330)
